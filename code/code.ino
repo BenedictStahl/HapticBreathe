@@ -17,7 +17,7 @@ const int MIN_MOTOR_PWM = 15;
 // -------------------------------------------------------------
 // Motor signal for calibration mode
 // -------------------------------------------------------------
-const int CALIBRATION_SIGNAL_PWM = 50;
+const int CALIBRATION_SIGNAL_PWM = 100;
 const int CALIBRATION_SIGNAL_ON_TIME = 120;
 const int CALIBRATION_SIGNAL_OFF_TIME = 100;
 
@@ -117,15 +117,15 @@ float last_signal_filtered = 0.0;
 float last_normalized_signal = 0.0;
 float rate_filtered = 0.0;
 
-float signal_smoothing = 0.3;
-float rate_smoothing = 0.3;
+float signal_smoothing = 0.8;
+float rate_smoothing = 0.8;
 
 bool filter_initialized = false;
 
 // -------------------------------------------------------------
 // Absolute mode tuning
 // -------------------------------------------------------------
-const int ABSOLUTE_MODE_MAX_PWM = 60;
+const int ABSOLUTE_MODE_MAX_PWM = 90;
 
 // Percentage of total calibrated span from the lower end
 const float ABSOLUTE_MODE_DEADZONE_PERCENT = 10.0;
